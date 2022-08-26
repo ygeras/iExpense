@@ -11,18 +11,19 @@ struct ExpenseSection: View {
     let title: String
     let expenses: [ExpenseItem]
     let deleteItems: (IndexSet) -> Void
+    private var totalPerSection: Double {
+        expenses.reduce(0.0) { partialResult, item in
+            partialResult + item.amount
+            // also can be expressed as { $0 + $1.amount }
+        }
+    }
     
     var body: some View {
-        Section(title) {
+        Section(header: Text(title), footer: Text(totalPerSection, format: .localCurrency)) {
             ForEach(expenses) { item in
                 HStack {
                     // Date and time info
-                    VStack(alignment: .leading) {
-                        Text(item.date.formatted(.dateTime.weekday()))
-                        Text(item.date.formatted(date: .numeric, time: .omitted))
-                        Text(item.date.formatted(date: .omitted, time: .shortened))
-                    }
-                    .font(.system(size: 11))
+                    DateView(date: item.date)
                     
                     // Body of transaction
                     VStack(alignment: .leading) {
@@ -37,6 +38,10 @@ struct ExpenseSection: View {
                     Text(item.amount, format: .localCurrency)
                         .style(for: item)
                 }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Expense item: \(item.name)")
+                .accessibilityValue("Amount: \(Text(item.amount, format: .localCurrency))")
+                .accessibilityHint("Category: \(item.type)")
                 
             }
             .onDelete(perform: deleteItems)
@@ -46,6 +51,7 @@ struct ExpenseSection: View {
 
 struct ExpenseSection_Previews: PreviewProvider {
     static var previews: some View {
-        ExpenseSection(title: "Example", expenses: []) { _ in }
+        ExpenseSection(title: "Example", expenses: [], deleteItems: {_ in })
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -13,39 +13,50 @@ struct ContentView: View {
     private var totalAmount: Double {
         expenses.items.reduce(0.0) { partialResult, item in
             partialResult + item.amount
+            // also can be expressed as { $0 + $1.amount }
         }
     }
     
+    @State private var animationAmount = 1.0
+    
     var body: some View {
-        NavigationView {
-            List {
-                ExpenseSection(title: "Business", expenses: expenses.businessItems, deleteItems: removeBusinessItems)
-                
-                ExpenseSection(title: "Personal", expenses: expenses.personalItems, deleteItems: removePersonalItems)
-                
-            }
-            .listStyle(.grouped)
-            .safeAreaInset(edge: .bottom, content: {
-                VStack(spacing: 20) {
-                    Divider()
-                    HStack {
-                        Text("Total amount:")
-                        Text(totalAmount, format: .localCurrency)
+        ZStack(alignment: .bottomTrailing) {
+            NavigationView {
+                List {
+                    ExpenseSection(title: "Business", expenses: expenses.businessItems, deleteItems: removeBusinessItems)
+                    
+                    ExpenseSection(title: "Personal", expenses: expenses.personalItems, deleteItems: removePersonalItems)
+                    
+                }
+                .listStyle(.grouped)
+                .safeAreaInset(edge: .bottom, content: {
+                    VStack(spacing: 10) {
+                        Divider()
+                        HStack {
+                            Text("Total amount:")
+                            Text(totalAmount, format: .localCurrency)
+                        }
                     }
-                }
-                .background(.ultraThinMaterial)
-            })
-            .navigationTitle("iExpense")
-            .toolbar {
-                Button {
-                    showingAddExpense = true
-                } label: {
-                    Image(systemName: "plus")
+                    .background(.ultraThinMaterial)
+                })
+                .navigationTitle("iExpense")
+                .sheet(isPresented: $showingAddExpense) {
+                    AddView(expenses: expenses)
                 }
             }
-            .sheet(isPresented: $showingAddExpense) {
-                AddView(expenses: expenses)
+            
+            Button {
+                showingAddExpense = true
+                animationAmount = 2
+            } label: {
+                Image(systemName: "plus")
+                    .font(.title)
+                    .padding()
             }
+            .tint(.white)
+            .background(Circle().fill(.teal))
+            .shadow(radius: 5, x: 2, y: 2)
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10))
         }
     }
     
@@ -74,5 +85,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
     }
 }

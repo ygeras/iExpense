@@ -17,6 +17,8 @@
 		B17BBD77283E002900B5D276 /* FormatStyle-LocalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD76283E002900B5D276 /* FormatStyle-LocalCurrency.swift */; };
 		B17BBD79283E04F800B5D276 /* View-ExpenseStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD78283E04F800B5D276 /* View-ExpenseStyle.swift */; };
 		B17BBD7B283E0BF400B5D276 /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD7A283E0BF400B5D276 /* ExpenseSection.swift */; };
+		B17BBD7D283E4EE300B5D276 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD7C283E4EE300B5D276 /* DateView.swift */; };
+		B1BCA72B28B89C4600DB2DD3 /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCA72A28B89C4600DB2DD3 /* String-EmptyChecking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		B17BBD76283E002900B5D276 /* FormatStyle-LocalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle-LocalCurrency.swift"; sourceTree = "<group>"; };
 		B17BBD78283E04F800B5D276 /* View-ExpenseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ExpenseStyle.swift"; sourceTree = "<group>"; };
 		B17BBD7A283E0BF400B5D276 /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
+		B17BBD7C283E4EE300B5D276 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		B1BCA72A28B89C4600DB2DD3 /* String-EmptyChecking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +70,13 @@
 				B13F3C74283B515A00D48DA2 /* iExpenseApp.swift */,
 				B13F3C76283B515A00D48DA2 /* ContentView.swift */,
 				B17BBD7A283E0BF400B5D276 /* ExpenseSection.swift */,
+				B17BBD7C283E4EE300B5D276 /* DateView.swift */,
 				B13F3D08283CC38700D48DA2 /* AddView.swift */,
 				B17BBD76283E002900B5D276 /* FormatStyle-LocalCurrency.swift */,
 				B17BBD78283E04F800B5D276 /* View-ExpenseStyle.swift */,
 				B13F3D04283CADDE00D48DA2 /* ExpenseItem.swift */,
 				B13F3D06283CAE4600D48DA2 /* Expenses.swift */,
+				B1BCA72A28B89C4600DB2DD3 /* String-EmptyChecking.swift */,
 				B13F3C78283B515D00D48DA2 /* Assets.xcassets */,
 				B13F3C7A283B515D00D48DA2 /* Preview Content */,
 			);
@@ -157,10 +163,12 @@
 			files = (
 				B13F3D07283CAE4600D48DA2 /* Expenses.swift in Sources */,
 				B13F3C77283B515A00D48DA2 /* ContentView.swift in Sources */,
+				B1BCA72B28B89C4600DB2DD3 /* String-EmptyChecking.swift in Sources */,
 				B13F3D09283CC38700D48DA2 /* AddView.swift in Sources */,
 				B17BBD79283E04F800B5D276 /* View-ExpenseStyle.swift in Sources */,
 				B17BBD7B283E0BF400B5D276 /* ExpenseSection.swift in Sources */,
 				B17BBD77283E002900B5D276 /* FormatStyle-LocalCurrency.swift in Sources */,
+				B17BBD7D283E4EE300B5D276 /* DateView.swift in Sources */,
 				B13F3D05283CADDE00D48DA2 /* ExpenseItem.swift in Sources */,
 				B13F3C75283B515A00D48DA2 /* iExpenseApp.swift in Sources */,
 			);
