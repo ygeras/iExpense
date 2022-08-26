@@ -19,6 +19,7 @@
 		B17BBD7B283E0BF400B5D276 /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD7A283E0BF400B5D276 /* ExpenseSection.swift */; };
 		B17BBD7D283E4EE300B5D276 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BBD7C283E4EE300B5D276 /* DateView.swift */; };
 		B1BCA72B28B89C4600DB2DD3 /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCA72A28B89C4600DB2DD3 /* String-EmptyChecking.swift */; };
+		B1BCA72D28B8A1CA00DB2DD3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B1BCA72C28B8A1CA00DB2DD3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B17BBD7A283E0BF400B5D276 /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
 		B17BBD7C283E4EE300B5D276 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		B1BCA72A28B89C4600DB2DD3 /* String-EmptyChecking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
+		B1BCA72C28B8A1CA00DB2DD3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		B13F3C68283B515A00D48DA2 = {
 			isa = PBXGroup;
 			children = (
+				B1BCA72C28B8A1CA00DB2DD3 /* README.md */,
 				B13F3C73283B515A00D48DA2 /* iExpense */,
 				B13F3C72283B515A00D48DA2 /* Products */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BCA72D28B8A1CA00DB2DD3 /* README.md in Resources */,
 				B13F3C7C283B515D00D48DA2 /* Preview Assets.xcassets in Resources */,
 				B13F3C79283B515D00D48DA2 /* Assets.xcassets in Resources */,
 			);
