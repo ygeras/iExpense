@@ -8,6 +8,6 @@ iExpense is an expense tracker that separates personal costs from business costs
 
 ## Project Screen
 
-<img src="images\iExpenseMain.png" width="300">
-<img src="images\iExpenseAdd.png" width="300">
+<img src="images\iExpenseMain.png" width="300"> <img src="images\iExpenseAdd.png" width="300">
+
 
