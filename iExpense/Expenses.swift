@@ -17,11 +17,11 @@ class Expenses: ObservableObject {
     }
     
     var personalItems: [ExpenseItem] {
-        items.filter { $0.type == "Personal"}
+        items.filter { $0.type == "Personal" }
     }
     
     var businessItems: [ExpenseItem] {
-        items.filter { $0.type == "Business"}
+        items.filter { $0.type == "Business" }
     }
     
     init() {
